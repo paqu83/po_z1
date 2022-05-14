@@ -2,6 +2,10 @@
 
 namespace Drupal\po_z1;
 
+/**
+ * Class Garaz.
+ * @package Drupal\po_z1
+ */
 class Garaz {
 
   private string $adres;

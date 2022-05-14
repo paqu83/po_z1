@@ -2,19 +2,19 @@
 
 namespace Drupal\po_z1;
 
+/**
+ * Class Samochod.
+ * @package Drupal\po_z1
+ */
 class Samochod {
 
   private string $marka;
-
   private string $model;
-
   private int $iloscDrzwi;
-
   private int $pojemnoscSilnika;
-
   private float $srednieSpalanie;
-
   private static int $iloscSamochodow = 0;
+  private string $numerRejestracyjny;
 
   /**
    * Samochod constructor.
@@ -25,13 +25,14 @@ class Samochod {
    * @param int $pojemnosc_silnika
    * @param float $srednie_spalanie
    */
-  public function __construct(string $marka='nieznana', string $model='nieznany', int $ilosc_drzwi=0, int $pojemnosc_silnika=0, float $srednie_spalanie=0.0) {
+  public function __construct(string $marka = 'nieznana', string $model = 'nieznany', int $ilosc_drzwi = 0, int $pojemnosc_silnika = 0, float $srednie_spalanie = 0.0, string $numer_rejestracyjny = 'nieznany') {
     $this->marka = $marka;
     $this->model = $model;
     $this->iloscDrzwi = $ilosc_drzwi;
     $this->pojemnoscSilnika = $pojemnosc_silnika;
     $this->srednieSpalanie = $srednie_spalanie;
     self::$iloscSamochodow++;
+    $this->numerRejestracyjny = $numer_rejestracyjny;
   }
 
   /**
@@ -136,3 +137,4 @@ class Samochod {
   }
 
 }
+
